@@ -1,1 +1,8 @@
 # cellsegmentation
+
+# Workflows
+1.CONSTRAINTS
+2.ENTITY
+3.COMPONENTS
+4.PIPELINES
+5.APP.PY
