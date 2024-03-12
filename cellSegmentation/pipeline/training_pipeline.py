@@ -2,20 +2,20 @@ import sys, os
 from cellSegmentation.custom_logger import logging
 from cellSegmentation.exception import AppException
 from cellSegmentation.components.data_ingestion import DataIngestion
-#from cellSegmentation.components.data_validation import DataValidation
+from cellSegmentation.components.data_validation import DataValidation
 #from cellSegmentation.components.model_trainer import ModelTrainer
 
 
-from cellSegmentation.entity.config_entity import (DataIngestionConfig)
+from cellSegmentation.entity.config_entity import (DataIngestionConfig,DataValidationConfig)
                                                  
 
-from cellSegmentation.entity.artifacts_entity import (DataIngestionArtifact)
+from cellSegmentation.entity.artifacts_entity import (DataIngestionArtifact,DataValidationArtifact)
                                                     
 
 class TrainPipeline:
     def __init__(self):
         self.data_ingestion_config = DataIngestionConfig()
-        #self.data_validation_config = DataValidationConfig()
+        self.data_validation_config = DataValidationConfig()
         #self.model_trainer_config = ModelTrainerConfig()
 
 
@@ -44,7 +44,7 @@ class TrainPipeline:
         
 
 
-    '''  
+     
     def start_data_validation(
         self, data_ingestion_artifact: DataIngestionArtifact
     ) -> DataValidationArtifact:
@@ -71,7 +71,7 @@ class TrainPipeline:
 
 
 
-    
+    '''
     def start_model_trainer(self
     ) -> ModelTrainerArtifact:
         try:
@@ -93,9 +93,9 @@ class TrainPipeline:
     def run_pipeline(self) -> None:
         try:
             data_ingestion_artifact = self.start_data_ingestion()
-            #data_validation_artifact = self.start_data_validation(
-             #   data_ingestion_artifact=data_ingestion_artifact
-            #)
+            data_validation_artifact = self.start_data_validation(
+               data_ingestion_artifact=data_ingestion_artifact
+            )
 
             #if data_validation_artifact.validation_status == True:
             #    model_trainer_artifact = self.start_model_trainer()

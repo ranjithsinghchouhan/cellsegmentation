@@ -26,7 +26,7 @@ class DataIngestionConfig:
 
     data_download_url: str = DATA_DOWNLOAD_URL
 
-'''
+
 
 @dataclass
 class DataValidationConfig:
@@ -41,7 +41,7 @@ class DataValidationConfig:
 
 
 
-
+'''
 @dataclass
 class ModelTrainerConfig:
     model_trainer_dir: str = os.path.join(

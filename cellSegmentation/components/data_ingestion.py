@@ -5,7 +5,7 @@ import gdown
 from cellSegmentation.custom_logger import logging
 from cellSegmentation.exception import AppException
 from cellSegmentation.entity.config_entity import DataIngestionConfig
-from cellSegmentation.entity.artifacts_entity import DataIngestionArtifact
+from cellSegmentation.entity.artifacts_entity import (DataIngestionArtifact)
 
 
 class DataIngestion:

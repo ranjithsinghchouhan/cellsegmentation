@@ -11,7 +11,7 @@ DATA_DOWNLOAD_URL: str = "https://drive.google.com/file/d/1TzaUCgoiFgKRD1XaNePbu
 
 
 
-''''
+
 """
 Data Validation realted contant start with DATA_VALIDATION VAR NAME
 """
@@ -22,7 +22,7 @@ DATA_VALIDATION_STATUS_FILE = 'status.txt'
 
 DATA_VALIDATION_ALL_REQUIRED_FILES = ["train", "valid", "test", "data.yaml"]
 
-
+'''
 
 """
 MODEL TRAINER related constant start with MODEL_TRAINER var name
